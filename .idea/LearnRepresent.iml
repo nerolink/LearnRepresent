@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/nn" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/parameters" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/train" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="Remote Python 2.7.15 (ssh://nerolink@222.201.145.249:22/home/nerolink/anaconda3/envs/py2/bin/python)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="projectConfiguration" value="Nosetests" />
+    <option name="PROJECT_TEST_RUNNER" value="Nosetests" />
+  </component>
+</module>
