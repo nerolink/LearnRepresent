@@ -138,7 +138,7 @@ for idx in range(1000, len(allfiles)):
         flog.write('Processed ' + str(idx - 1000) + ' files, testError = ' + str(testError) + 'trainError = ' + str(
             trainError) + '\n')
         flog.flush()
-        foutParam = open('param', 'w')
+        foutParam = open('param', 'wb')
         p.dump(np.concatenate((Weights, Biases)), foutParam)
         foutParam.close()
         trainError = 0
