@@ -6,7 +6,7 @@
         <remote-mappings server-id="python@ssh://nerolink@222.201.145.249:22/home/nerolink/anaconda3/envs/py2/bin/python">
           <settings>
             <list>
-              <mapping local-root="$PROJECT_DIR$" remote-root="/home/nerolink/python_project/LearnRepresent" />
+              <mapping local-root="$PROJECT_DIR$" remote-root="/home/nerolink/python_projects/LearnRepresent" />
             </list>
           </settings>
         </remote-mappings>

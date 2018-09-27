@@ -12,6 +12,7 @@ np.random.seed(10)
 # load data
 
 tokenMap = cp.load(file('tokenMap.txt'))
+print tokenMap
 tokenNum = len(tokenMap)
 numFea = gl.numFea
 Weights = np.array([])
@@ -24,7 +25,7 @@ Biases, Bidx = InitParam(Biases, num=numFea)
 
 numW = len(Weights)
 
-param = cp.load(file('param'))
+param = cp.load(file('param', 'rb'))
 
 Weights = param[:numW]
 Biases = param[numW:]

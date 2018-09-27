@@ -20,33 +20,34 @@ tokenNum = len(tokenMap)
 # tokenNum = 0
 # fin = open(inputfile)
 # print tokenNum, tokenMap['BinaryOp']
-##
+# #
 # filedir = '../subtree/'
 # flog = file('log.txt', 'w')
 # fileNum = 1
 # for onefile in os.listdir(filedir):
-#  fin = open( filedir + onefile)
-#  while True:
-#    line = fin.readline().strip('\n\r')
-#    if not line:
-#        break
-#    fin.readline()
-#    for token in line.split(' '):
-#        if not tokenMap.has_key(token):
-#            tokenMap[token] = tokenNum
-#            tokenNum += 1    
-#  fileNum += 1
-#  if fileNum%1000 == 0:
-#    #print fileNum
-#    fout= file('tokenMap.txt', 'w')
-#    flog.write(str(fileNum)+'\n')
-#    flog.flush()
-#    p.dump(tokenMap, fout)
-#    fout.close()
-#  fin.close()
-
+#     fin = open(filedir + onefile)
+#     while True:
+#         line = fin.readline().strip('\n\r')
+#         if not line:
+#             break
+#         fin.readline()
+#         for token in line.split(' '):
+#             if not tokenMap.has_key(token):
+#                 tokenMap[token] = tokenNum
+#                 tokenNum += 1
+#     fileNum += 1
+#     if fileNum % 1000 == 0:
+#         # print fileNum
+#         fout = file('tokenMap.txt', 'w')
+#         flog.write(str(fileNum) + '\n')
+#         flog.flush()
+#         p.dump(tokenMap, fout)
+#         fout.close()
+#     fin.close()
+#
 # fout = file('tokenMap.txt', 'w')
 # import cPickle as p
+#
 # p.dump(tokenMap, fout)
 # fout.close()
 
@@ -62,7 +63,7 @@ Weights, Wright = InitParam(Weights, num=numFea * numFea)
 Biases, Btoken = InitParam(Biases, num=numFea * tokenNum)
 Biases, Bidx = InitParam(Biases, num=numFea)
 
-Weights = Weights.reshape((-1, 1))
+Weights = Weights.reshape((-1, 1))  # 转成列向量
 Biases = Biases.reshape((-1, 1))
 gradWeights = np.zeros_like(Weights)
 gradBiases = np.zeros_like(Biases)
@@ -125,7 +126,7 @@ minTestError = 10000
 
 lastError = 10000
 
-flog = open('log', 'w')
+flog = open('log', 'wb')
 for idx in range(1000, len(allfiles)):
 
     if idx % 100 == 0:

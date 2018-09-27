@@ -3,6 +3,7 @@ import numpy as np
 ############################################
 # Identity
 
+
 def dummyIdentity(x):
     return x
 def dummyEye(dummy, x):
@@ -20,7 +21,12 @@ def sigmoid(x):
     return 1 / (1 + np.e ** -x )
     
 def dummySigmoidPrime(dummy, y):
-
+    """
+    sigmoid 的导数
+    :param dummy:
+    :param y:
+    :return:
+    """
     return y * (1 - y)
 ############################################
 # hyperbolic tangent

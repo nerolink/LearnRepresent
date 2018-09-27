@@ -5,9 +5,18 @@ sys.path.append('../nn/')
 import FFNN, gl, Connections as Con, Layers as Lay, numpy as np
 
 
-
-
 def ConstructNet(tokens, leafCntString, Wleft, Wright, Bidx, tokenMap, numFea, tokenNum):
+    """
+    :param tokens: [父节点,子节点0，子节点1，.......]
+    :param leafCntString:  [子节点0的叶子数，子节点1的叶子数，......]
+    :param Wleft:  左权重
+    :param Wright:  右权重
+    :param Bidx:
+    :param tokenMap:
+    :param numFea:特征的维度
+    :param tokenNum:
+    :return:
+    """
     leafCnt = leafCntString.split(' ')
     for idx, cnt in enumerate(leafCnt):
         leafCnt[idx] = int(leafCnt[idx])
